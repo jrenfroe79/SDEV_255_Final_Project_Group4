@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <div class="mainContentWrapper">
+
+            <div class="headerWrapper">
+                <div class="headerImage"></div>
+
+                <nav class="navBar">
+                    <ul class="navBarList">
+                        <li class="navBarItems"> <a href="index.html">Home</a></li>
+                        <li class="navBarItems"><a href="courseList.html">Course List</a></li>
+                        <li class="navBarItems"><a href="courseEditor.html">Edit Courses</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mainBodyWrapper">
+                <div>This is where the main content will go, we could display something like "total students enrolled", "lists of teachers", etc...</div>
+                <br> <!-- REMOVE AFTER STYLING -->
+                <div class="courseListWrapper">
+                    <div class="courseSelector">
+                        <form>
+                            <label for="courses">Courses Available:</label>
+                            <br>
+                            <select name="courses" id="coursesSelectionList" multiple>
+                                <option value="math231">Math 231</option>
+                                <option value="sdev153">SDEV 153</option>
+                                <option value="itsp145">ITSP 145</option>
+                                <option value="sci122">SCIENCE 122</option>
+                                <option value="eng111">ENGLISH 111</option>
+                              </select>
+                              <br> <!-- REMOVE AFTER STYLING -->
+                              <input type="submit" value="submit">
+                        </form>
+                    </div>
+
+                    <div class="currentEnrolledCourses">
+                        <ul>
+                            <li>MATH 127</li>
+                            <li>ENGLISH 109</li>
+                        </ul>
+                    </div>
+                    
+                   
+                </div>
+                <!-- <div></div> -->
+            </div>
+
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
