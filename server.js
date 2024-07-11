@@ -1,10 +1,20 @@
-
+ 		
+const path = require('path');
+const dotenv = require('dotenv'); // Require the 'dotenv' package
 const express = require('express');
 const morgan = require('morgan');
 // const mongoose = require('mongoose');
 // const dotenv = require('dotenv').config();
 
 
+ 	
+// Load environment variables from .env file in development
+		
+if (process.env.NODE_ENV !== 'production') {
+		
+  dotenv.config();
+		
+}
 
 // // connect to mongoDB
 // const dbURI = `mongodb+srv://${process.env.db_user}:${process.env.db_pass}@sdev255projectteam1.aw1cgbj.mongodb.net/SDEV255ProjectTeam`;
@@ -28,6 +38,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 // routes
+
+app.get('/', (req, res) => {
+		
+  res.sendFile(path.join(__dirname, 'html', 'index.html'));
+		
+  res.redirect('/courseList')
+		
+});
+
 app.get('/', (req, res) => {
   res.redirect('/courseList')
 });
