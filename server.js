@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-const courseRoutes = require('./routes/courseRoutes');
+
 
 
 // connect to mongoDB
@@ -33,8 +33,7 @@ app.get('/about', (req, res) => {
   res.render('about', { title: 'About' });
 });
 
-//course routes
-app.use('/courses', courseRoutes);
+
 
 // 404 page
 app.use((req, res) => {
