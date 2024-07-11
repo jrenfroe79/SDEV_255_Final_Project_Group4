@@ -20,18 +20,22 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // middleware & static files
-app.use(express.static('/public'));
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 // routes
 app.get('/', (req, res) => {
-  res.redirect('/courses')
+  res.redirect('/courseEditor')
 });
 
-app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
+app.get('/', (req, res) => {
+  res.redirect('/courseList')
 });
+
+// app.get('/about', (req, res) => {
+//   res.render('about', { title: 'About' });
+// });
 
 
 
