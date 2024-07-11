@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
 const PORT = process.env.PORT || 3040; // Set default port to 3040 if PORT is not set
 
 // Serve static files from the 'SDEV_255_Final_Project_Group4' directory
-app.use(express.static(path.join(__dirname, 'sdev-255-final-project-group4')));
+app.use(express.static(path.join(__dirname, '/sdev-255-final-project-group4')));
 
 // Define a route to serve your HTML file
 app.get('/', (req, res) => {
