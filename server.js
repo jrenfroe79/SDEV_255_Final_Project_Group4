@@ -27,7 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
 const app = express();
 
 // Serve static files from the 'SDEV_255_Final_Project_Group4' directory
-app.use(express.static(path.join(__dirname, 'sdev-255-final-project-group4')));
+app.use(express.static(path.join(__dirname, 'sdev_255_final_project_group4')));
 
 // register view engine
 app.set('view engine', 'ejs');
